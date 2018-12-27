@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+umask 022
+
+cd /config
+
+exec \
+	s6-setuidgid abc /usr/sbin/sniproxy -c /config/sniproxy.conf -f

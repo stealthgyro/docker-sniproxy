@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -f /config/sniproxy.conf ]; then \
+		cp /etc/sniproxy.conf /config/sniproxy.conf
+	fi
+
+# permissions
+chown -R abc:abc \
+	/config
+chown -R abc:abc \
+	/var/log/sniproxy
+
